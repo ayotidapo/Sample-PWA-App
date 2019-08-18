@@ -3,6 +3,7 @@ import React from 'react';
 import { Button, Checkbox, Row, Col, Table, Divider, Tag } from 'antd';
 import { doAlert } from '../../components/alert/AlertComponent';
 
+console.log(123);
 const { Column, ColumnGroup } = Table;
 const data = [
   {
