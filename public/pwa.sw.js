@@ -27,23 +27,16 @@ self.addEventListener('activate', event => {
 });
 
 // This triggers when user starts the app
-self.addEventListener('install', function(event) {
-  if (doCache) {
-    event.waitUntil(
-      caches.open(CACHE_NAME).then(function(cache) {
-        fetch('asset-manifest.json')
-          .then(response => {
-            response.json();
-          })
-          .then(assets => {
-            // We will cache initial page and the main.js
-            // We could also cache assets like CSS and images
-            const urlsToCache = ['/', '/index.html'];
-            cache.addAll(urlsToCache);
-          });
-      }),
-    );
-  }
+self.addEventListener('install', e => {
+  console.log('installing service worker!!');
+  const timeStamp = Date.now();
+  e.waitUntil(
+    caches.open(CACHE_NAME).then(cache => {
+      return cache
+        .addAll([`/`, `/index.html`, `/static/js/bundle.js`])
+        .then(() => self.skipWaiting());
+    }),
+  );
 });
 
 // Here we intercept request and serve up the matching files

@@ -38,23 +38,25 @@ const Login = () => {
         style={{
           border: '1px solid blue',
           padding: '10px',
+          textAlign: 'center',
         }}
       >
-        <h2>Login here</h2>
+        <h2>This is just a Sample PWA app!</h2>
         <Button
+          style={{ margin: '5px' }}
           onClick={() => doAlert('This is a message', 'success')}
           type="primary"
         >
           click me Now
         </Button>
-        <Checkbox>Checkbox</Checkbox>
+        <Checkbox style={{ margin: '5px' }}>Checkbox</Checkbox>
         <div>
-          <Row gutter={8}>
+          <Row gutter={8} style={{ textAlign: 'center' }}>
             <Col lg={12} xs={24} style={{ border: '1px solid skyblue' }}>
-              col-12
+              It Should prompt you to add App to Home Screen.
             </Col>
             <Col lg={12} xs={24} style={{ border: '1px solid skyblue' }}>
-              col-12
+              It should load super fast and work offline!!!
             </Col>
           </Row>
           <div style={{ overflowX: 'scroll' }}>
