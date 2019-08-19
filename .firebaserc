@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "PWA test": "pwa-test-c4c7c",
+    "staging": "pwa-test-c4c7c",
+    "default": "pwa-test-c4c7c"
+  }
+}
