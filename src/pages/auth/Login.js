@@ -41,13 +41,13 @@ const Login = () => {
           textAlign: 'center',
         }}
       >
-        <h2>This is just a Sample PWA app!</h2>
+        <h2>This is just a Sample PWA App!</h2>
         <Button
           style={{ margin: '5px' }}
           onClick={() => doAlert('This is a message', 'success')}
           type="primary"
         >
-          click me Now
+          click me Now!
         </Button>
         <Checkbox style={{ margin: '5px' }}>Checkbox</Checkbox>
         <div>

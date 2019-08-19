@@ -2,10 +2,6 @@
   "name": "dml",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "npm": "6.9.0",
-    "node": "10.16.1"
-  },
   "dependencies": {
     "antd": "^3.21.4",
     "axios": "^0.18.0",
@@ -33,7 +29,7 @@
     "watch-css": "npm run build-css && node-sass-chokidar --include-path ./src --include-path ./src/scss --include-path ./node_modules src/ -o src/ --watch --recursive",
     "start-js": "react-app-rewired start",
     "start": "set PORT=3002 && npm-run-all -p watch-css start-js",
-    "build": "npm run build-css && GENERATE_SOURCEMAP=false react-app-rewired start",
+    "build": "npm run build-css && cross-env GENERATE_SOURCEMAP=false react-app-rewired start",
     "test": "rreact-app-rewired test",
     "eject": "react-scripts eject",
     "precommit": "NODE_ENV=production lint-staged",
